@@ -25,6 +25,15 @@ def write_to_csv():
     df.to_csv(path, mode= 'a', index=False)
 
 
+def update_csv():
+    tk_name = input("Please enter the name of the csv file: ")
+    tk_amnt = int(input("Please enter the amount of the csv file: "))
+
+    rd = pd.read_csv(path)
+    mask = rd["Name"].str.lower() == tk_name.lower()
+    rd.loc[mask,"Amount"] = tk_amnt
+    rd.to_csv(path, index=False)
+
 def delete_expense():
     print("Please enter the name of the csv file you would like to delete: ")
     tk_name = input("Please enter the name of the csv file you would like to delete: ")
