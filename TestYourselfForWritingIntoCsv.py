@@ -1,5 +1,4 @@
 import pandas as pd
-import requests as rq
 
 from datetime import datetime as dt
 import os
@@ -26,15 +25,15 @@ def write_to_csv():
     df.to_csv(path, mode= 'a', index=False)
 
 
-# def update_csv():
-#     tk_name = input("Please enter the name of the expenditure you would like to update: ")
-#     tk_amount = int(input("Please enter the amount you would like to update: "))
-#
-#     rd = pd.read_csv(path)
-#     mask = rd["Name"].str.lower() == tk_name.lower()
-#     rd.loc[mask, "Amount"] = tk_amount
-#     rd.to_csv(path, index=False)
-#     print()
+def update_csv():
+    tk_name = input("Please enter the name of the csv file: ")
+    tk_amnt = int(input("Please enter the amount of the csv file: "))
+    rd =pd.read_csv(path)
+    mask = rd["Name"] == tk_name
+    rd.loc[mask, "Amount"] = tk_amnt
+    rd.to_csv(path,  index=False)
+    print("Successfully updated csv file")
+
 
 def delete_expense():
     print("Please enter the name of the csv file you would like to delete: ")
