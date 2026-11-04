@@ -50,8 +50,8 @@ while True:
             print("Invalid choice")
 
 
-def delete_expense():
-    print("Please enter the name of the csv file you would like to delete: ")
+# def delete_expense():
+#     print("Please enter the name of the csv file you would like to delete: ")
 
 # print("im here")
 #
