@@ -34,10 +34,7 @@ def update_csv():
     rd.loc[mask,"Amount"] = tk_amnt
     rd.to_csv(path, index=False)
 
-def delete_expense():
-    print("Please enter the name of the csv file you would like to delete: ")
-    tk_name = input("Please enter the name of the csv file you would like to delete: ")
- # ddd
+
 
 while True:
 
